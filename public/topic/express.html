@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="../sidebar/sidebar.js"></script>
+  <title>Express</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <div id="sidebar-placeholder">
+        </div>
+      </div>
+      <div class="col-10">
+        <h1 style="text-align: center;">Express</h1>
+        <hr>
+        <div class="mycontainer">
+          <p>
+            Express er et webapplikations framework, der bruges i Node.js til at håndtere server-delen.
+            <br>
+            <br>
+            <b>Hvordan bruger man det?</b>
+            <br>
+            Før man kan bruge det skal man installere det. Dette kan gøres på to måder.
+            <br>
+            <br>
+            Først skal man oprette en fil i sin root, der hedder "package.json" og gøre den til en gyldig json fil.
+            Denne fil indeholder metadata omkring projektet.
+            <br>
+            <br>
+            1. Man kan køre kommandoen "npm install express" i sin terminal, så indsætter den automatisk et json objekt
+            ind i vores dependencies.
+            <br>
+            <br>
+            2. Vi kan manuelt lave et objekt ved 'dependencies:' "express" er pakkenavnet og "4.17.1" er versionen af
+            det vi ønsker.
+            <br>
+            <br>
+            <img src="../images/dep.PNG" style="height: 118px; width: 281px;">
+            <br>
+            <br>
+            Derefter kører vi kommandoen "npm install". Denne tjekker for dependencies og installerer dem. Man kan
+            sagtens agvive flere dependencies.
+            <br>
+            Efter dependencies er installeret, bliver der oprettet en fil, der hedder "package-lock.json", denne
+            indeholder informationer omkring projektet. Der oprettes endevidere en mappe, der hedder node_modules, som
+            indeholder filer fra bibliotekerne.
+            <br>
+            <br>
+            <b>Hvad så nu?</b>
+            <br>
+            <br>
+            Efter det er installeret kan vi begynde af bruge det i vores js filer.
+            <br>
+            Først opretter vi en fil, der hedder "app.js".
+            <br>
+            Heri skriver vi:
+            <br>
+            <br>
+            <img src="../images/dep1.PNG" style="width: 313px; height: 42px;">
+            <br>
+            <br>
+            I først linje importere vi express. Vi skriver require, da det bruges til at inkludere moduler, der ligger i
+            seperate
+            filer.
+            <br>
+            Herefter instantiere vi et const obejekt af express, som vi kalder app. Vi benytter const, da den ikke
+            ændrer i sig senere.
+            <br>
+            Nederst vi vores app.js, angiver vi, hvilken port vores applikation skal køre på.
+            <br>
+            <br>
+            <img src="../images/port.PNG" style="width: 159px; height: 29;">
+            <br>
+            <br>
+            Det skal dog nævnes, at før vi kan sende/modtage JSON objekter skal vi skrive app.use(express.json())
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body{
+    background-color: var(--quaternary-color)
+}
+h1{
+    padding-top: 25px;
+    text-align: center;
+}
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+.row{
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+hr{
+    background-color: var(--secendary-color);
+}
+.mycontainer {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+.tab { 
+    margin-left: 20px; 
+    font-size: 14px;
+}
+.table td, .table th{
+    border-top: 1px solid var(--tertiary-color);
+    text-align: center!important;
+    
+}
+.table-bordered td, .table-bordered th {
+    border: 0px;
+}
+.table-bordered {
+    border: 0px;
+}
+.sidebar{
+    background-color: var(--tertiary-color);
+    width: 200px;
+    text-align: center;
+    padding-top: 10px;
+    height: 100%;
+    display: block;
+    padding: 10px;
+    position: fixed;
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ 
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+li{
+    padding: 5px;
+    display: block;
+}
+li:hover{
+    background-color: var(--secendary-color);
+    border-radius: 12px;
+    
+}
+ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+}
+:root {
+    --primary-color: rgb(144, 170, 203);
+    --secendary-color: rgb(255, 176, 133);
+    --tertiary-color: rgb(249, 213, 167);
+    --quaternary-color: rgb(254, 241, 230);
+}

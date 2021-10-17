@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="../sidebar/sidebar.js"></script>
+    <title>appjs</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div id="sidebar-placeholder">
+                </div>
+            </div>
+            <div class="col-10">
+                <h1>app.js filen</h1>
+                <hr>
+                <div class="mycontainer">
+                    <p>Dette er filen, hvor vores forskellige request vil være, hvilket i teorien er den, den styrer
+                        vores backend.
+                        <br>
+                        Denne fil kan køres ved enten at skrive "node app.js" eller installere nodemon i vores
+                        dependencies og skrive "nodemon app.js".
+                        <br>
+                        <br>
+                        <b>GET mapping - Eksempel der henter et dankmeme med et specifikt id</b>
+                        <br>
+                        <br>
+                        <img src="../images/getmapping.PNG" style="width: 770px; height: 151px;">
+                        <br>
+                        <br>
+                        Overstående er et eksempel på en Get metode med et endpoint og en callback funktion.
+                        <br>
+                        Callback metoden tager imod to paramtre, som er req = request, res = respond.
+                        <br>
+                        Årsagen til, at vi gerne vil benytte en callback funktion er fordi, vi ikke ønsker, at vores
+                        endpoint skal blive blokeret.
+                        <br>
+                        I denne metode bliver der benyttet en parth variabel - dette indikiere :id.
+                        <br>
+                        Vi bruger vores res.send til at sende et json objekt return - dette bliver vist i browseren.
+                        <br>
+                        <br>
+                        <b>POST mapping - Eksempel der poster et nyt dankmeme</b>
+                        <br>
+                        <br>
+                        <img src="../images/postmapping.PNG" style="width: 400px; height: 169px;">
+                        <br>
+                        <br>
+                        I dette eksemplen sætter vi id'et på det nye til at være værdien af den let variabel, der hedder
+                        AUTO_INCREMENT+1.
+                        <br>
+                        Derefter pusher vi req.body til et array, der er deffineret - dette er vores body på vores json
+                        objekt og derefter sendes der besked retur.
+                        <br>
+                        <br>
+                        <img src="../images/letarray.PNG" style="width: 580px; height: 367px;">
+                        <br>
+                        <br>
+                        <b>DELETE mapping - Eksempel der sletter et dankmeme med et specifikt id</b>
+                        <br>
+                        <br>
+                        <img src="../images/deletemapping.PNG" style="width: 713; height: 218px;">
+                        <br>
+                        <br>
+                        Ligesom ved get mapping bliver der her benyttet en parth variabel, som er et id.
+                        <br>
+                        Vi deffinerer en const varibale, der kaldes meme. Vi bruger findIndex på vores liste fra
+                        tidligere, for at finde det meme vis id er det samme som vores parth variabel og få dets index.
+                        Derefter bruges
+                        splice funktionnen på vores liste. Denne funktion har en startværdi (et index) og antal. Vi vil
+                        gerne starte på vores specifikke meme og slette én, som er vores meme.
+                        <br>
+                        <br>
+                        <b>PATCH mapping - Eksempel der opdetere et dankmeme med et specifikt id</b>
+                        <br>
+                        <br>
+                        <img src="../images/patchmapping.PNG" style="width: 633px; height: 213px;">
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
